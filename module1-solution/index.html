@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="MsgApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Dependency Injection in JS (and AngularJS)</title>
+  </head>
+
+  <body>
+    <h1>Dependency Injection in JS (and AngularJS)</h1>
+    <div ng-controller='MsgController'>
+      Message is : <br>
+      {{sayMessage()}}
+      <div>
+          <button ng-click="flipImage()">Patti Playhome</button>
+          <br>
+          <img width="200" height="200" ng-src="images/patti_{{school}}.jpg">
+      </div>
+    </div>
+  </body>
+</html>
