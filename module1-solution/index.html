@@ -1,22 +1,33 @@
 <!DOCTYPE html>
-<html ng-app="MsgApp">
-  <head>
-    <meta charset="utf-8">
-    <script src="angular.min.js"></script>
-    <script src="app.js"></script>
-    <title>Dependency Injection in JS (and AngularJS)</title>
-  </head>
+<html ng-app="LunchCheck">
 
-  <body>
-    <h1>Dependency Injection in JS (and AngularJS)</h1>
-    <div ng-controller='MsgController'>
-      Message is : <br>
-      {{sayMessage()}}
-      <div>
-          <button ng-click="flipImage()">Patti Playhome</button>
-          <br>
-          <img width="200" height="200" ng-src="images/patti_{{school}}.jpg">
-      </div>
+<head>
+  <title>Lunch Checker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
+  <style>
+    .message {
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body class="container">
+  <h2>Module One Assignment - Lunch Checker</h2>
+  <div ng-controller="LunchCheckController" class="form-group">
+    <input ng-model="lunchMenu" id="lunch-menu" type="text" placeholder="list comma separated dishes you usually have for lunch" class="form-control">
+    <div>`, ,` is not considered as a valid input towards count.</div>
+    <div class="form-group" padding-top="50px">
+      <button class="btn btn-default" ng-click="checkLunchParams();">Check If Too Much</button>
     </div>
-  </body>
+    <div class="form-group message">
+      <!-- Your message can go here. -->
+      Actual Result : {{actualLunchResult}}
+    </div>
+  </div>
+</body>
+
 </html>
