@@ -34,13 +34,12 @@
     <h1>Shopping List Check Off</h1>
 
     <div class="row">
-
       <!-- To Buy List -->
       <div class="col-md-6" ng-controller='ToBuyController as itemToBuy'>
         <h2>To Buy:</h2>
         <ul>
           <li ng-repeat="item in itemToBuy.items">
-            {{ item.quantity }} of {{ item.name }}
+            Buy <b>{{ item.quantity   }}</b> of <b>{{ item.name }}</b>
             <button ng-click="itemToBuy.removeItem($index);">Remove Item</button>
           </li>
         </ul>
@@ -52,14 +51,13 @@
         <h2>Already Bought:</h2>
         <ul>
           <li ng-repeat="item in itemBought.items">
-            {{ item.quantity }} of {{ item.name }}
+            Bought <b>{{ item.quantity }}</b> of <b>{{ item.name }}</b>
           </li>
         </ul>
         <div ng-if="itemBought.items.length === 0" class="emptyMessage">{{itemBought.errorMessage}}</div>
       </div>
     </div>
   </div>
-
 </body>
 
 </html>
