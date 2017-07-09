@@ -1,0 +1,19 @@
+<table>
+  <tr ng-repeat="item in narrowList.found">
+    <td>{{ item }}</td>
+    <td><button class="btn btn-secondary" ng-click="narrowList.onRemove({index: $index});">Don't want this one!</button></td>
+  </tr>
+  <tr>
+    <div class="error" ng-if="narrowList.found.length === 0">Nothing found</div>
+  </tr>
+</table>
+
+
+<!-- {{ item.description }}
+      {{ item.id }}
+      {{ item.large_portion_name }}
+      {{ item.name }}
+      {{ item.price_large }}
+      {{ item.price_small }}
+      {{ item.short_name }}
+      {{ item.small_portion_name }} -->
